@@ -1,0 +1,10 @@
+num1 = float(input("value 1: "))
+num2 = float(input("value 2: "))
+total = num1 + num2
+print(num1, "+", num2, "=", total)
+sub = num1 - num2
+print(num1, "-", num2, "=", sub)
+mul = num1 * num2
+print(num1, "*", num2, "=", mul)
+div = num1 / num2
+print(num1, "/", num2, "=", div)
