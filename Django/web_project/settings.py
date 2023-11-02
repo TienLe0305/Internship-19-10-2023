@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'web_project.urls'
@@ -80,8 +82,10 @@ DATABASES = {
         'NAME': 'polls',                 # Tên của cơ sở dữ liệu MySQL
         'USER': 'root',             # Tên người dùng của MySQL
         'PASSWORD': 'rentran1412',            # Mật khẩu của người dùng MySQL
-        'HOST': '',                 # Địa chỉ máy chủ MySQL (có thể là localhost hoặc IP)
-        'PORT': '3306',                      # Cổng của MySQL (mặc định là 3306)
+        # Địa chỉ máy chủ MySQL (có thể là localhost hoặc IP)
+        'HOST': '',
+        # Cổng của MySQL (mặc định là 3306)
+        'PORT': '3306',
     }
 }
 
@@ -106,6 +110,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
