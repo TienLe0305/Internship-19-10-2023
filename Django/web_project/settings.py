@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "polls.apps.PollsConfig",
+    "hello",
+    # "polls",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'polls',                 # Tên của cơ sở dữ liệu MySQL
+        'NAME': 'hello',                 # Tên của cơ sở dữ liệu MySQL
         'USER': 'root',             # Tên người dùng của MySQL
         'PASSWORD': 'rentran1412',            # Mật khẩu của người dùng MySQL
         # Địa chỉ máy chủ MySQL (có thể là localhost hoặc IP)

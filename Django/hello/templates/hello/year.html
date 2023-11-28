@@ -1,0 +1,6 @@
+<h1>Welcome to My Blog</h1>
+<ul>
+  {% for post in posts %}
+  <li>{{ post.title }} - {{ post.author }} - {{ post.date }}</li>
+  {% endfor %}
+</ul>
