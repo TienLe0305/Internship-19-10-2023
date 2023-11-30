@@ -25,9 +25,6 @@ SECRET_KEY = 'django-insecure-#zm6$nhtosx+3e)jh-x-xrb5x$^$bsh*2czlzqza#t2aso*3n3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tutorial',
     'users',
     'rest_framework',
     'oauth2_provider',
@@ -50,9 +48,20 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'oauth2_provider.middleware.OAuth2TokenMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'oauth2_provider.backends.OAuth2Backend',
+]
+
+OAUTH2_PROVIDER = {
+    'SCOPES': {'read': 'Read scope', 'write': 'Write scope'},
+}
 
 # id:Uaa3InErLBNLaXE9mSmwvKrwElfxtmsFv5T5rMYS
 # scr: ag1YRR0PU8I3jE6OcsxXChvMcdVQvJLjdBWF8pebQZo8BpRO74jx4QXFssUC4XbeTLG9oZDIDCcRb7eABffTWNKltUrduVQnC41FXIR506396Nfj6jYIrAw8tpHXxWiS
