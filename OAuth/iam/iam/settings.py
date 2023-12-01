@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'users',
     'rest_framework',
     'oauth2_provider',
+    'django_celery_beat',
 ]
 
 AUTH_USER_MODEL='users.User'
@@ -58,10 +59,6 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'oauth2_provider.backends.OAuth2Backend',
 ]
-
-OAUTH2_PROVIDER = {
-    'SCOPES': {'read': 'Read scope', 'write': 'Write scope'},
-}
 
 # id:Uaa3InErLBNLaXE9mSmwvKrwElfxtmsFv5T5rMYS
 # scr: ag1YRR0PU8I3jE6OcsxXChvMcdVQvJLjdBWF8pebQZo8BpRO74jx4QXFssUC4XbeTLG9oZDIDCcRb7eABffTWNKltUrduVQnC41FXIR506396Nfj6jYIrAw8tpHXxWiS
