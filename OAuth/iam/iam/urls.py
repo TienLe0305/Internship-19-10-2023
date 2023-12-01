@@ -28,7 +28,7 @@ from users.views import secret_page
 oauth2_endpoint_views = [
     path('authorize/', oauth2_views.AuthorizationView.as_view(), name="authorize"),
     path('token/', oauth2_views.TokenView.as_view(), name="token"),
-    path('revoke-token/', oauth2_views.RevokeTokenView.as_view(), name="revoke-token"),
+    path('revoke_token/', oauth2_views.RevokeTokenView.as_view(), name="revoke-token"),
 ]
 
 if settings.DEBUG:
