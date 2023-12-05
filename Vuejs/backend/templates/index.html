@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+{% load django_vite %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./static/logo.ico" />
+    <title>Pandosima Co.,Ltd</title>
+    {% vite_hmr_client %}
+    {% vite_asset 'src/main.js' %}
+  </head>
+  <body>
+    <!--<script src="https://accounts.google.com/gsi/client" async defer></script> -->
+    <!-- This part is in the screenshot at the bottom! -->
+    <div id="app"></div>
+  </body>
+</html>
